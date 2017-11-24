@@ -1,4 +1,4 @@
-package com.amazonaws.services.kinesis.flume;
+package com.dcg.kinesis.sink;
 
 /*
  * Copyright 2012-2014 Amazon.com, Inc. or its affiliates. All Rights Reserved.

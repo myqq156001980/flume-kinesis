@@ -8,7 +8,7 @@ node1.sources.netcat.bind = localhost
 node1.sources.netcat.port = 44444
 
 ## Sink
-node1.sinks.KinesisSink.type = com.amazonaws.services.kinesis.flume.KinesisSink 
+node1.sinks.KinesisSink.type = KinesisSink
 node1.sinks.KinesisSink.accessKey=  
 node1.sinks.KinesisSink.accessSecretKey = 
 node1.sinks.KinesisSink.kinesisPartitions = 2

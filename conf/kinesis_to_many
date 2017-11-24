@@ -12,7 +12,7 @@ node1.sources.KinesisSource.initialPosition=LATEST
 node1.sources.KinesisSource.kinesisEndpoint=https://kinesis.us-east-1.amazonaws.com
 
 ## Sink1
-node1.sinks.KinesisSink.type = com.amazonaws.services.kinesis.flume.KinesisSink 
+node1.sinks.KinesisSink.type = KinesisSink
 node1.sinks.KinesisSink.accessKey= 
 node1.sinks.KinesisSink.accessSecretKey = 
 node1.sinks.KinesisSink.kinesisPartitions = 2
