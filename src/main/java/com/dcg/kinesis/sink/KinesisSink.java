@@ -41,6 +41,7 @@ public class KinesisSink extends AbstractSink implements Configurable {
 //    private String accessSecretKey;
     private String streamName;
     private String numberOfPartitions;
+    private String region;
 //    private String kinesisEndpoint;
 
     @Override
@@ -50,6 +51,7 @@ public class KinesisSink extends AbstractSink implements Configurable {
 //        this.accessSecretKey = context.getString("accessSecretKey", "defaultValue");
         this.numberOfPartitions = context.getString("kinesisPartitions", "1");
         this.streamName = context.getString("streamName", "defaultValue");
+        this.region = context.getString("region", "ap-southeast-1");
         LOG.info(streamName);
 //        this.kinesisEndpoint = context.getString("kinesisEndpoint", "https://kinesis.us-east-1.amazonaws.com");
 //        if (streamName.equals("defaultValue") || accessKey.equals("defaultValue") || this.accessSecretKey.equals("defaultValue") || this.streamName.equals("defaultValue")) {
@@ -63,7 +65,7 @@ public class KinesisSink extends AbstractSink implements Configurable {
         AmazonKinesisClientBuilder clientBuilder = AmazonKinesisClientBuilder.standard();
 
 
-        clientBuilder.setRegion("ap-southeast-1");
+        clientBuilder.setRegion(this.region);
         try {
             clientBuilder.setCredentials(CredentialUtils.getCredentialsProvider());
         } catch (Exception e) {
