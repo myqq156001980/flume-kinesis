@@ -8,7 +8,7 @@ node1.sources.netcat.bind = localhost
 node1.sources.netcat.port = 44444
 
 ## Sink
-node1.sinks.KinesisSink.type = KinesisSink
+node1.sinks.KinesisSink.type = com.dcg.kinesis.sink.KinesisSink
 node1.sinks.KinesisSink.kinesisPartitions = 2
 node1.sinks.KinesisSink.streamName = mySecondLargeStream
 node1.sinks.KinesisSink.region = ap-southeast-1
